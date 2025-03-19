@@ -1,0 +1,65 @@
+amount,time,category,location,merchant,day_of_week,transaction_type,user_age,user_income,device_used,previous_frauds,fraud
+100,12,1,"New York","Store A","Monday","in-store",25,50000,"mobile",0,0
+200,15,2,"Los Angeles","Store B","Tuesday","online",30,60000,"desktop",1,1
+50,8,1,"Chicago","Store C","Wednesday","in-store",22,45000,"mobile",0,0
+1000,20,3,"Miami","Store D","Thursday","online",35,80000,"desktop",2,1
+300,14,2,"Houston","Store E","Friday","in-store",28,55000,"mobile",0,0
+150,10,1,"Phoenix","Store F","Saturday","online",40,70000,"desktop",1,0
+500,18,2,"Philadelphia","Store G","Sunday","in-store",33,65000,"mobile",0,1
+75,9,1,"San Antonio","Store H","Monday","online",27,48000,"desktop",0,0
+1200,22,3,"San Diego","Store I","Tuesday","in-store",29,75000,"mobile",1,1
+250,13,2,"Dallas","Store J","Wednesday","online",31,60000,"desktop",0,0
+80,7,1,"Austin","Store K","Thursday","in-store",26,52000,"mobile",0,0
+600,19,2,"Seattle","Store L","Friday","online",32,68000,"desktop",1,1
+90,6,1,"Denver","Store M","Saturday","in-store",24,47000,"mobile",0,0
+1300,21,3,"Boston","Store N","Sunday","online",36,82000,"desktop",2,1
+350,16,2,"Atlanta","Store O","Monday","in-store",30,58000,"mobile",0,0
+200,11,1,"Portland","Store P","Tuesday","online",29,63000,"desktop",1,0
+700,17,2,"Las Vegas","Store Q","Wednesday","in-store",34,71000,"mobile",0,1
+60,5,1,"Detroit","Store R","Thursday","online",23,49000,"desktop",0,0
+1400,23,3,"Baltimore","Store S","Friday","in-store",37,78000,"mobile",1,1
+400,15,2,"Memphis","Store T","Saturday","online",31,62000,"desktop",0,0
+180,10,1,"Milwaukee","Store U","Sunday","in-store",28,54000,"mobile",0,0
+800,20,2,"Albuquerque","Store V","Monday","online",33,69000,"desktop",1,1
+70,4,1,"Tucson","Store W","Tuesday","in-store",25,51000,"mobile",0,0
+1500,24,3,"Fresno","Store X","Wednesday","online",38,79000,"desktop",2,1
+450,14,2,"Sacramento","Store Y","Thursday","in-store",32,67000,"mobile",0,0
+220,12,1,"Kansas City","Store Z","Friday","online",27,56000,"desktop",1,0
+900,19,2,"Mesa","Store AA","Saturday","in-store",35,73000,"mobile",0,1
+65,3,1,"Colorado Springs","Store AB","Sunday","online",24,50000,"desktop",0,0
+1600,22,3,"Raleigh","Store AC","Monday","in-store",39,81000,"mobile",1,1
+500,13,2,"Omaha","Store AD","Tuesday","online",30,59000,"desktop",0,0
+120,11,1,"Long Beach","Store AE","Wednesday","in-store",26,53000,"mobile",0,0
+850,18,2,"Virginia Beach","Store AF","Thursday","online",34,70000,"desktop",1,1
+55,2,1,"Oakland","Store AG","Friday","in-store",23,48000,"mobile",0,0
+1700,21,3,"Minneapolis","Store AH","Saturday","online",37,77000,"desktop",2,1
+550,16,2,"Tulsa","Store AI","Sunday","in-store",31,61000,"mobile",0,0
+230,12,1,"Arlington","Store AJ","Monday","online",28,55000,"desktop",1,0
+950,19,2,"Tampa","Store AK","Tuesday","in-store",36,74000,"mobile",0,1
+85,7,1,"New Orleans","Store AL","Wednesday","online",25,52000,"desktop",0,0
+1800,23,3,"Wichita","Store AM","Thursday","in-store",40,83000,"mobile",1,1
+600,14,2,"Cleveland","Store AN","Friday","online",32,66000,"desktop",0,0
+240,10,1,"Bakersfield","Store AO","Saturday","in-store",29,57000,"mobile",0,0
+1050,17,2,"Anaheim","Store AP","Sunday","online",35,72000,"desktop",1,1
+105,5,1,"Honolulu","Store AQ","Monday","in-store",24,49000,"mobile",0,0
+2000,24,3,"Riverside","Store AR","Tuesday","online",38,80000,"desktop",2,1
+700,13,2,"Santa Ana","Store AS","Wednesday","in-store",33,68000,"mobile",0,0
+260,11,1,"Corpus Christi","Store AT","Thursday","online",27,56000,"desktop",1,0
+1100,18,2,"Lexington","Store AU","Friday","in-store",36,75000,"mobile",0,1
+115,4,1,"Henderson","Store AV","Saturday","online",26,53000,"desktop",0,0
+2100,21,3,"Stockton","Store AW","Sunday","in-store",39,82000,"mobile",1,1
+750,16,2,"Saint Paul","Store AX","Monday","online",31,62000,"desktop",0,0
+280,12,1,"Cincinnati","Store AY","Tuesday","in-store",30,58000,"mobile",0,0
+1150,19,2,"Greensboro","Store AZ","Wednesday","online",34,71000,"desktop",1,1
+125,3,1,"Pittsburgh","Store BA","Thursday","in-store",25,51000,"mobile",0,0
+2200,22,3,"Lincoln","Store BB","Friday","online",37,78000,"desktop",2,1
+800,14,2,"Orlando","Store BC","Saturday","in-store",32,67000,"mobile",0,0
+300,10,1,"Irvine","Store BD","Sunday","online",28,55000,"desktop",1,0
+1200,20,2,"Newark","Store BE","Monday","in-store",35,73000,"mobile",0,1
+135,2,1,"Durham","Store BF","Tuesday","online",24,50000,"desktop",0,0
+2300,23,3,"Chula Vista","Store BG","Wednesday","in-store",40,84000,"mobile",1,1
+850,15,2,"Fort Wayne","Store BH","Thursday","online",33,69000,"desktop",0,0
+320,11,1,"Jersey City","Store BI","Friday","in-store",29,57000,"mobile",0,0
+1250,17,2,"Chandler","Store BJ","Saturday","online",36,76000,"desktop",1,1
+145,1,1,"Lubbock","Store BK","Sunday","in-store",26,54000,"mobile",0,0
+2400,24,3,"Madison","Store BL","Monday","online",38,79000,"desktop",2,1
