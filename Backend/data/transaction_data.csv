@@ -1,65 +1,110 @@
 amount,time,category,location,merchant,day_of_week,transaction_type,user_age,user_income,device_used,previous_frauds,fraud
-100,12,1,"New York","Store A","Monday","in-store",25,50000,"mobile",0,0
-200,15,2,"Los Angeles","Store B","Tuesday","online",30,60000,"desktop",1,1
-50,8,1,"Chicago","Store C","Wednesday","in-store",22,45000,"mobile",0,0
-1000,20,3,"Miami","Store D","Thursday","online",35,80000,"desktop",2,1
-300,14,2,"Houston","Store E","Friday","in-store",28,55000,"mobile",0,0
-150,10,1,"Phoenix","Store F","Saturday","online",40,70000,"desktop",1,0
-500,18,2,"Philadelphia","Store G","Sunday","in-store",33,65000,"mobile",0,1
-75,9,1,"San Antonio","Store H","Monday","online",27,48000,"desktop",0,0
-1200,22,3,"San Diego","Store I","Tuesday","in-store",29,75000,"mobile",1,1
-250,13,2,"Dallas","Store J","Wednesday","online",31,60000,"desktop",0,0
-80,7,1,"Austin","Store K","Thursday","in-store",26,52000,"mobile",0,0
-600,19,2,"Seattle","Store L","Friday","online",32,68000,"desktop",1,1
-90,6,1,"Denver","Store M","Saturday","in-store",24,47000,"mobile",0,0
-1300,21,3,"Boston","Store N","Sunday","online",36,82000,"desktop",2,1
-350,16,2,"Atlanta","Store O","Monday","in-store",30,58000,"mobile",0,0
-200,11,1,"Portland","Store P","Tuesday","online",29,63000,"desktop",1,0
-700,17,2,"Las Vegas","Store Q","Wednesday","in-store",34,71000,"mobile",0,1
-60,5,1,"Detroit","Store R","Thursday","online",23,49000,"desktop",0,0
-1400,23,3,"Baltimore","Store S","Friday","in-store",37,78000,"mobile",1,1
-400,15,2,"Memphis","Store T","Saturday","online",31,62000,"desktop",0,0
-180,10,1,"Milwaukee","Store U","Sunday","in-store",28,54000,"mobile",0,0
-800,20,2,"Albuquerque","Store V","Monday","online",33,69000,"desktop",1,1
-70,4,1,"Tucson","Store W","Tuesday","in-store",25,51000,"mobile",0,0
-1500,24,3,"Fresno","Store X","Wednesday","online",38,79000,"desktop",2,1
-450,14,2,"Sacramento","Store Y","Thursday","in-store",32,67000,"mobile",0,0
-220,12,1,"Kansas City","Store Z","Friday","online",27,56000,"desktop",1,0
-900,19,2,"Mesa","Store AA","Saturday","in-store",35,73000,"mobile",0,1
-65,3,1,"Colorado Springs","Store AB","Sunday","online",24,50000,"desktop",0,0
-1600,22,3,"Raleigh","Store AC","Monday","in-store",39,81000,"mobile",1,1
-500,13,2,"Omaha","Store AD","Tuesday","online",30,59000,"desktop",0,0
-120,11,1,"Long Beach","Store AE","Wednesday","in-store",26,53000,"mobile",0,0
-850,18,2,"Virginia Beach","Store AF","Thursday","online",34,70000,"desktop",1,1
-55,2,1,"Oakland","Store AG","Friday","in-store",23,48000,"mobile",0,0
-1700,21,3,"Minneapolis","Store AH","Saturday","online",37,77000,"desktop",2,1
-550,16,2,"Tulsa","Store AI","Sunday","in-store",31,61000,"mobile",0,0
-230,12,1,"Arlington","Store AJ","Monday","online",28,55000,"desktop",1,0
-950,19,2,"Tampa","Store AK","Tuesday","in-store",36,74000,"mobile",0,1
-85,7,1,"New Orleans","Store AL","Wednesday","online",25,52000,"desktop",0,0
-1800,23,3,"Wichita","Store AM","Thursday","in-store",40,83000,"mobile",1,1
-600,14,2,"Cleveland","Store AN","Friday","online",32,66000,"desktop",0,0
-240,10,1,"Bakersfield","Store AO","Saturday","in-store",29,57000,"mobile",0,0
-1050,17,2,"Anaheim","Store AP","Sunday","online",35,72000,"desktop",1,1
-105,5,1,"Honolulu","Store AQ","Monday","in-store",24,49000,"mobile",0,0
-2000,24,3,"Riverside","Store AR","Tuesday","online",38,80000,"desktop",2,1
-700,13,2,"Santa Ana","Store AS","Wednesday","in-store",33,68000,"mobile",0,0
-260,11,1,"Corpus Christi","Store AT","Thursday","online",27,56000,"desktop",1,0
-1100,18,2,"Lexington","Store AU","Friday","in-store",36,75000,"mobile",0,1
-115,4,1,"Henderson","Store AV","Saturday","online",26,53000,"desktop",0,0
-2100,21,3,"Stockton","Store AW","Sunday","in-store",39,82000,"mobile",1,1
-750,16,2,"Saint Paul","Store AX","Monday","online",31,62000,"desktop",0,0
-280,12,1,"Cincinnati","Store AY","Tuesday","in-store",30,58000,"mobile",0,0
-1150,19,2,"Greensboro","Store AZ","Wednesday","online",34,71000,"desktop",1,1
-125,3,1,"Pittsburgh","Store BA","Thursday","in-store",25,51000,"mobile",0,0
-2200,22,3,"Lincoln","Store BB","Friday","online",37,78000,"desktop",2,1
-800,14,2,"Orlando","Store BC","Saturday","in-store",32,67000,"mobile",0,0
-300,10,1,"Irvine","Store BD","Sunday","online",28,55000,"desktop",1,0
-1200,20,2,"Newark","Store BE","Monday","in-store",35,73000,"mobile",0,1
-135,2,1,"Durham","Store BF","Tuesday","online",24,50000,"desktop",0,0
-2300,23,3,"Chula Vista","Store BG","Wednesday","in-store",40,84000,"mobile",1,1
-850,15,2,"Fort Wayne","Store BH","Thursday","online",33,69000,"desktop",0,0
-320,11,1,"Jersey City","Store BI","Friday","in-store",29,57000,"mobile",0,0
-1250,17,2,"Chandler","Store BJ","Saturday","online",36,76000,"desktop",1,1
-145,1,1,"Lubbock","Store BK","Sunday","in-store",26,54000,"mobile",0,0
-2400,24,3,"Madison","Store BL","Monday","online",38,79000,"desktop",2,1
+100,12,"debit","New York","Store A","Monday","in-store",25,50000,"mobile",0,0
+200,15,"credit","Los Angeles","Store B","Tuesday","online",30,60000,"desktop",1,1
+50,8,"debit","Chicago","Store C","Wednesday","in-store",22,45000,"mobile",0,0
+1200,3,"bank transfer","Miami","Store D","Thursday","online",35,75000,"desktop",0,1
+75,14,"debit","Boston","Store E","Friday","in-store",28,55000,"mobile",0,0
+5000,23,"credit","Houston","Store F","Saturday","online",40,80000,"tablet",2,1
+30,11,"debit","Seattle","Store G","Sunday","in-store",24,48000,"mobile",0,0
+250,16,"credit","Atlanta","Store H","Monday","online",32,65000,"desktop",0,0
+1800,2,"bank transfer","Dallas","Store I","Tuesday","online",45,90000,"desktop",3,1
+65,10,"debit","Denver","Store J","Wednesday","in-store",26,52000,"mobile",0,0
+300,13,"credit","Phoenix","Store K","Thursday","online",31,62000,"desktop",1,1
+90,9,"debit","Philadelphia","Store L","Friday","in-store",23,47000,"mobile",0,0
+4200,4,"bank transfer","San Francisco","Store M","Saturday","online",50,100000,"desktop",0,1
+55,17,"debit","Washington","Store N","Sunday","in-store",27,53000,"mobile",0,0
+150,14,"credit","Austin","Store O","Monday","online",33,68000,"desktop",0,0
+700,1,"bank transfer","Las Vegas","Store P","Tuesday","online",38,85000,"tablet",2,1
+80,12,"debit","Portland","Store Q","Wednesday","in-store",29,56000,"mobile",0,0
+350,18,"credit","Nashville","Store R","Thursday","online",34,70000,"desktop",1,1
+95,10,"debit","Detroit","Store S","Friday","in-store",25,51000,"mobile",0,0
+2500,0,"bank transfer","Orlando","Store T","Saturday","online",42,95000,"desktop",4,1
+60,15,"debit","Minneapolis","Store U","Sunday","in-store",30,58000,"mobile",0,0
+400,19,"credit","Charlotte","Store V","Monday","online",36,72000,"desktop",0,0
+110,11,"debit","Salt Lake City","Store W","Tuesday","in-store",24,49000,"mobile",0,0
+3800,22,"bank transfer","San Diego","Store X","Wednesday","online",48,98000,"tablet",1,1
+70,13,"debit","Indianapolis","Store Y","Thursday","in-store",31,59000,"mobile",0,0
+200,20,"credit","Columbus","Store Z","Friday","online",35,71000,"desktop",0,0
+125,9,"debit","San Antonio","Store AA","Saturday","in-store",26,54000,"mobile",0,0
+1500,5,"bank transfer","Memphis","Store AB","Sunday","online",39,88000,"desktop",2,1
+85,16,"debit","Baltimore","Store AC","Monday","in-store",28,57000,"mobile",0,0
+450,21,"credit","Fort Worth","Store AD","Tuesday","online",37,74000,"desktop",1,1
+40,8,"debit","Milwaukee","Store AE","Wednesday","in-store",22,46000,"mobile",0,0
+5000,23,"bank transfer","El Paso","Store AF","Thursday","online",52,110000,"desktop",3,1
+65,14,"debit","Albuquerque","Store AG","Friday","in-store",27,55000,"mobile",0,0
+275,17,"credit","Tucson","Store AH","Saturday","online",33,69000,"desktop",0,0
+115,10,"debit","Fresno","Store AI","Sunday","in-store",25,50000,"mobile",0,0
+2200,3,"bank transfer","Sacramento","Store AJ","Monday","online",44,92000,"tablet",1,1
+75,12,"debit","Kansas City","Store AK","Tuesday","in-store",29,56000,"mobile",0,0
+325,15,"credit","Mesa","Store AL","Wednesday","online",34,70000,"desktop",0,0
+55,9,"debit","Virginia Beach","Store AM","Thursday","in-store",23,48000,"mobile",0,0
+3000,1,"bank transfer","Omaha","Store AN","Friday","online",46,96000,"desktop",2,1
+80,13,"debit","Oakland","Store AO","Saturday","in-store",30,60000,"mobile",0,0
+175,18,"credit","Colorado Springs","Store AP","Sunday","online",36,73000,"desktop",1,1
+90,11,"debit","Raleigh","Store AQ","Monday","in-store",26,52000,"mobile",0,0
+1800,4,"bank transfer","Long Beach","Store AR","Tuesday","online",41,89000,"tablet",0,1
+60,16,"debit","Miami","Store AS","Wednesday","in-store",28,57000,"mobile",0,0
+225,19,"credit","Atlanta","Store AT","Thursday","online",35,71000,"desktop",0,0
+100,12,"debit","New York","Store A","Monday","in-store",25,50000,"mobile",0,0
+200,15,"credit","Los Angeles","Store B","Tuesday","online",30,60000,"desktop",1,1
+50,8,"debit","Chicago","Store C","Wednesday","in-store",22,45000,"mobile",0,0
+1200,3,"bank transfer","Miami","Store D","Thursday","online",35,75000,"desktop",0,1
+75,14,"debit","Boston","Store E","Friday","in-store",28,55000,"mobile",0,0
+5000,23,"credit","Houston","Store F","Saturday","online",40,80000,"tablet",2,1
+30,11,"debit","Seattle","Store G","Sunday","in-store",24,48000,"mobile",0,0
+250,16,"credit","Atlanta","Store H","Monday","online",32,65000,"desktop",0,0
+1800,2,"bank transfer","Dallas","Store I","Tuesday","online",45,90000,"desktop",3,1
+65,10,"debit","Denver","Store J","Wednesday","in-store",26,52000,"mobile",0,0
+300,13,"credit","Phoenix","Store K","Thursday","online",31,62000,"desktop",1,1
+90,9,"debit","Philadelphia","Store L","Friday","in-store",23,47000,"mobile",0,0
+4200,4,"bank transfer","San Francisco","Store M","Saturday","online",50,100000,"desktop",0,1
+55,17,"debit","Washington","Store N","Sunday","in-store",27,53000,"mobile",0,0
+150,14,"credit","Austin","Store O","Monday","online",33,68000,"desktop",0,0
+700,1,"bank transfer","Las Vegas","Store P","Tuesday","online",38,85000,"tablet",2,1
+80,12,"debit","Portland","Store Q","Wednesday","in-store",29,56000,"mobile",0,0
+350,18,"credit","Nashville","Store R","Thursday","online",34,70000,"desktop",1,1
+95,10,"debit","Detroit","Store S","Friday","in-store",25,51000,"mobile",0,0
+2500,0,"bank transfer","Orlando","Store T","Saturday","online",42,95000,"desktop",4,1
+60,15,"debit","Minneapolis","Store U","Sunday","in-store",30,58000,"mobile",0,0
+400,19,"credit","Charlotte","Store V","Monday","online",36,72000,"desktop",0,0
+110,11,"debit","Salt Lake City","Store W","Tuesday","in-store",24,49000,"mobile",0,0
+3800,22,"bank transfer","San Diego","Store X","Wednesday","online",48,98000,"tablet",1,1
+70,13,"debit","Indianapolis","Store Y","Thursday","in-store",31,59000,"mobile",0,0
+200,20,"credit","Columbus","Store Z","Friday","online",35,71000,"desktop",0,0
+125,9,"debit","San Antonio","Store AA","Saturday","in-store",26,54000,"mobile",0,0
+1500,5,"bank transfer","Memphis","Store AB","Sunday","online",39,88000,"desktop",2,1
+85,16,"debit","Baltimore","Store AC","Monday","in-store",28,57000,"mobile",0,0
+450,21,"credit","Fort Worth","Store AD","Tuesday","online",37,74000,"desktop",1,1
+40,8,"debit","Milwaukee","Store AE","Wednesday","in-store",22,46000,"mobile",0,0
+5000,23,"bank transfer","El Paso","Store AF","Thursday","online",52,110000,"desktop",3,1
+65,14,"debit","Albuquerque","Store AG","Friday","in-store",27,55000,"mobile",0,0
+275,17,"credit","Tucson","Store AH","Saturday","online",33,69000,"desktop",0,0
+115,10,"debit","Fresno","Store AI","Sunday","in-store",25,50000,"mobile",0,0
+2200,3,"bank transfer","Sacramento","Store AJ","Monday","online",44,92000,"tablet",1,1
+75,12,"debit","Kansas City","Store AK","Tuesday","in-store",29,56000,"mobile",0,0
+325,15,"credit","Mesa","Store AL","Wednesday","online",34,70000,"desktop",0,0
+55,9,"debit","Virginia Beach","Store AM","Thursday","in-store",23,48000,"mobile",0,0
+3000,1,"bank transfer","Omaha","Store AN","Friday","online",46,96000,"desktop",2,1
+80,13,"debit","Oakland","Store AO","Saturday","in-store",30,60000,"mobile",0,0
+175,18,"credit","Colorado Springs","Store AP","Sunday","online",36,73000,"desktop",1,1
+90,11,"debit","Raleigh","Store AQ","Monday","in-store",26,52000,"mobile",0,0
+1800,4,"bank transfer","Long Beach","Store AR","Tuesday","online",41,89000,"desktop",0,1
+60,16,"debit","Miami","Store AS","Wednesday","in-store",28,57000,"mobile",0,0
+225,19,"credit","Atlanta","Store AT","Thursday","online",35,71000,"desktop",0,0
+3500,2,"bank transfer","New Orleans","Store AU","Friday","online",49,99000,"desktop",1,1
+45,10,"debit","Cleveland","Store AV","Saturday","in-store",24,49000,"mobile",0,0
+500,20,"credit","Arlington","Store AW","Sunday","online",38,82000,"tablet",0,0
+130,14,"debit","Tampa","Store AX","Monday","in-store",29,58000,"mobile",0,0
+2700,0,"bank transfer","Pittsburgh","Store AY","Tuesday","online",43,91000,"desktop",3,1
+85,11,"debit","Cincinnati","Store AZ","Wednesday","in-store",27,56000,"mobile",0,0
+600,22,"credit","Anaheim","Store BA","Thursday","online",39,86000,"desktop",1,1
+95,9,"debit","Honolulu","Store BB","Friday","in-store",31,61000,"mobile",0,0
+3100,5,"bank transfer","Reno","Store BC","Saturday","online",47,97000,"tablet",2,1
+70,15,"debit","Buffalo","Store BD","Sunday","in-store",26,53000,"mobile",0,0
+200,17,"credit","Madison","Store BE","Monday","online",35,70000,"desktop",0,0
+140,8,"debit","Durham","Store BF","Tuesday","in-store",23,47000,"mobile",0,0
+1900,3,"bank transfer","Boise","Store BG","Wednesday","online",42,93000,"desktop",1,1
+55,12,"debit","Lincoln","Store BH","Thursday","in-store",25,51000,"mobile",0,0
+750,21,"credit","Spokane","Store BI","Friday","online",37,75000,"tablet",0,0
+110,10,"debit","Anchorage","Store BJ","Saturday","in-store",28,57000,"mobile",0,0
+2300,1,"bank transfer","Birmingham","Store BK","Sunday","online",45,94000,"desktop",2,1
