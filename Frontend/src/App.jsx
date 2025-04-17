@@ -1,170 +1,133 @@
 import React, { useState } from "react";
+import axios from "axios";
 
-const App = () => {
-  const [formData, setFormData] = useState({
-    amount: "",
-    time: "",
-    category: "",
-    location: "",
-    merchant: "",
-    day_of_week: "",
-    transaction_type: "",
-    user_age: "",
-    user_income: "",
-    device_used: "",
-    previous_frauds: "",
-  });
-  const [prediction, setPrediction] = useState(null);
+const API_URL = "http://localhost:5000";
+const initialForm = {
+  amount: "",
+  time: "",
+  category: "",
+  location: "",
+  merchant: "",
+  day_of_week: "",
+  transaction_type: "",
+  user_age: "",
+  user_income: "",
+  device_used: "",
+  previous_frauds: "",
+};
+
+export default function App() {
+  const [form, setForm] = useState(initialForm);
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
+    setError("");
+    setData(null);
     try {
-      console.log("Sending data:", formData); // Log the data being sent
-      const response = await fetch("http://127.0.0.1:5000/predict", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-      const result = await response.json();
-      setPrediction(result.fraud);
-    } catch (error) {
-      console.error("Error:", error);
+      const res = await axios.post(API_URL + "/predict", form);
+      if (res.data.status === "success") setData(res.data);
+      else setError(res.data.message);
+    } catch (err) {
+      setError(err.response?.data?.message || err.message);
+    } finally {
+      setLoading(false);
     }
   };
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 p-6">
-      <div className="bg-white shadow-lg rounded-lg p-8 flex">
-        {/* Left Section */}
-        <div className="w-2/6 bg-gray-900 text-white p-8 rounded-lg">
-          <h1 className="text-2xl font-bold mb-4">
-            AI-Powered Fraud Detection
-          </h1>
-          <p className="text-gray-400 mb-4">
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-6">
+      <div className="bg-white rounded-2xl shadow-lg flex overflow-hidden w-full max-w-6xl">
+        {/* Sidebar */}
+        <div className="w-1/3 bg-slate-900 text-white p-8">
+          <h2 className="text-3xl font-bold mb-4">AI-Powered Fraud Detection</h2>
+          <p className="text-sm leading-relaxed">
             Detect Fraud. Prevent Losses. Stay Secure.
-          </p>
-          <p className="text-gray-400">
-            Our AI-powered fraud detection system analyzes transaction patterns,
-            detects anomalies, and helps prevent fraudulent activities in real
-            time. Simply enter transaction details, and let our intelligent
-            system determine whether it’s legitimate or fraudulent.
+            <br /><br />
+            Our AI solution analyzes transaction patterns, detects anomalies, and helps prevent fraudulent activities in real time.
           </p>
         </div>
 
-        {/* Right Section - Form */}
-        <div className="w-1/2 p-8">
-          <h2 className="text-xl font-semibold mb-4 text-gray-900">
-            Transaction Details
-          </h2>
-          <form onSubmit={handleSubmit} className="grid grid-cols-2 gap-4">
-            {[
-              {
-                name: "amount",
-                title: "Amount",
-                placeholder: "Transaction amount",
-              },
-              {
-                name: "time",
-                title: "Time",
-                placeholder: "24-hour format (0-23)",
-              },
-              {
-                name: "category",
-                title: "Category",
-                placeholder: "Credit , Debit , Bank Transfer",
-              },
-              {
-                name: "location",
-                title: "Location",
-                placeholder: "Eg. Los Angeles",
-              },
-              {
-                name: "merchant",
-                title: "Merchant",
-                placeholder: "Eg. Store A",
-              },
-              {
-                name: "day_of_week",
-                title: "Day of Week",
-                placeholder: "Eg. Monday",
-              },
-              {
-                name: "transaction_type",
-                title: "Transaction Type",
-                placeholder: "Online/In-store",
-              },
-              {
-                name: "user_age",
-                title: "User Age",
-                placeholder: "Enter user's age",
-              },
-              {
-                name: "user_income",
-                title: "User Income",
-                placeholder: "Enter user's income",
-              },
-              {
-                name: "device_used",
-                title: "Device Used",
-                placeholder: "Mobile/Desktop",
-              },
-              {
-                name: "previous_frauds",
-                title: "Previous Fraud History",
-                placeholder: "0-3",
-              },
-            ].map(({ name, title, placeholder }, index) => (
-              <div key={index}>
-                <label className="block text-gray-700 font-medium mb-1">
-                  {title}
-                </label>
+        {/* Main Content */}
+        <div className="w-2/3 p-8">
+          <h3 className="text-xl font-semibold mb-6">Transaction Details</h3>
+          <form onSubmit={handleSubmit} className="grid grid-cols-2 gap-5">
+            {Object.keys(form).map((key) => (
+              <div key={key}>
+                <label className="block text-sm font-medium capitalize mb-1">{key.replace(/_/g, ' ')}</label>
                 <input
-                  type="text"
-                  name={name}
-                  placeholder={placeholder}
-                  value={formData[name]}
+                  name={key}
+                  value={form[key]}
                   onChange={handleChange}
-                  className="border-b border-gray-400 p-2 focus:outline-none focus:border-gray-600 w-full"
+                  placeholder={key === 'amount' ? 'Transaction amount' :
+                    key === 'time' ? '24-hour format (0-23)' :
+                    key === 'category' ? 'Credit, Debit, Bank Transfer' :
+                    key === 'location' ? 'Eg. Los Angeles' :
+                    key === 'merchant' ? 'Eg. Store A' :
+                    key === 'day_of_week' ? 'Eg. Monday' :
+                    key === 'transaction_type' ? 'Online/In-store' :
+                    key === 'user_age' ? "Enter user's age" :
+                    key === 'user_income' ? "Enter user's income" :
+                    key === 'device_used' ? 'Mobile/Desktop' :
+                    key === 'previous_frauds' ? '0-3' : '' }
+                  className="w-full border border-gray-300 rounded-md p-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  required
                 />
               </div>
             ))}
-            <div className="col-span-2 flex justify-end">
+            <div className="col-span-2 text-right">
               <button
                 type="submit"
-                className="bg-gray-900 text-white px-6 py-2 rounded-lg hover:bg-gray-800"
-              >
-                Predict Fraud
-              </button>
+                disabled={loading}
+                className="mt-2 bg-slate-900 text-white py-2 px-6 rounded-md hover:bg-slate-800 transition"
+              >{loading ? 'Predicting...' : 'Predict Fraud'}</button>
             </div>
           </form>
-          {/* Prediction Result */}
-          {prediction !== null && (
-            <div
-              className="mt-6 p-4 rounded-lg text-center font-semibold text-lg"
-              style={{
-                backgroundColor: prediction === 1 ? "#ffcccc" : "#ccffcc",
-                color: prediction === 1 ? "#cc0000" : "#008000",
-              }}
-            >
-              {prediction === 1
-                ? "This transaction appears to be fraudulent!"
-                : "This transaction seems legitimate and secure."}
+
+          {error && <p className="text-red-600 mt-4">{error}</p>}
+
+          {data && (
+            <div className="mt-8">
+              <div className={
+                'p-4 rounded text-center font-semibold ' +
+                (data.prediction === 1 ? 'bg-red-100 text-red-700' : 'bg-green-100 text-green-700')
+              }>
+                {data.prediction === 1 ? '⚠️ Transaction Predicted as FRAUDULENT' : '✅ Transaction is LEGITIMATE'}
+              </div>
+
+              <div className="mt-4 grid grid-cols-3 gap-4 text-sm">
+                <div><span className="font-semibold">Probability:</span> {(data.probability * 100).toFixed(2)}%</div>
+                <div><span className="font-semibold">Risk Level:</span> {data.risk_level}</div>
+                <div><span className="font-semibold">Timestamp:</span> {new Date(data.timestamp).toLocaleString()}</div>
+              </div>
+
+              <div className="mt-6">
+                <h4 className="text-lg font-semibold mb-2">Top 5 Feature Impacts</h4>
+                <div className="space-y-3">
+                  {data.explanation.feature_importances.map((feat, i) => (
+                    <div key={i} className={
+                      'p-3 rounded border ' +
+                      (feat.impact > 0 ? 'bg-red-50 border-red-200' : 'bg-green-50 border-green-200')
+                    }>
+                      <p className="font-medium">{feat.feature}</p>
+                      <p>Value: <span className="font-mono">{feat.value}</span></p>
+                      <p>Impact: <span className="font-mono">{feat.impact > 0 ? '+' : ''}{feat.impact.toFixed(4)}</span> ({feat.direction})</p>
+                    </div>
+                  ))}
+                </div>
+                <p className="mt-3 text-xs text-gray-500">Base value: {data.explanation.base_value.toFixed(4)}</p>
+              </div>
             </div>
           )}
         </div>
       </div>
     </div>
   );
-};
-
-export default App;
+}
