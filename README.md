@@ -1,4 +1,5 @@
 Run powershell cmd for activating virtual environment in backend directory
+
 Step #1 - Create a virtual environment 
 python -m venv venv
 
