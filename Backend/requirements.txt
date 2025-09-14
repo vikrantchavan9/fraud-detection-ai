@@ -6,9 +6,7 @@ imbalanced-learn
 xgboost
 shap
 numpy
-joblibpython
+joblib
 python-dotenv
-utils.explainer
-dotenv
 
 # pip install flask flask-cors pandas scikit-learn imblearn xgboost shap numpy joblib python-dotenv utils.explainer dotenv
